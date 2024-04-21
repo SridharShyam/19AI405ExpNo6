@@ -75,7 +75,7 @@ end
 Simple enough, return +10 if the current player wins the game, -10 if the other player wins and 0 for a draw. You will note that who the player is doesn't matter. X or O is irrelevant, only who's turn it happens to be.
 
 And now the actual minimax algorithm; note that in this implementation a choice or move is simply a row / column address on the board, for example [0,2] is the top right square on a 3x3 board.
-
+```
 def minimax(game)
     return score(game) if game.over?
     scores = [] # an array of scores
@@ -101,6 +101,7 @@ def minimax(game)
         return scores[min_score_index]
     end
 end
+```
 ### PROGRAM:
 ```
 import time
